@@ -77,7 +77,7 @@ class DocumentService
     private function generateFilename(string $description, string $docNo): string
     {
         $safeDescription = preg_replace('/[^a-zA-Z0-9_-]/', '_', $description);
-        return sprintf('%s_%s.docx', $safeDescription, $docNo);
+        return sprintf('%s_%s.pdf', $safeDescription, $docNo);
     }
 
     private function checkDirectoryExists(string $directory): void
