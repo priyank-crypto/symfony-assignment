@@ -1,0 +1,18 @@
+parameters:
+
+services:
+    App\Service\DocumentService:
+        arguments:
+           
+            $logger: '@Psr\Log\LoggerInterface'
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
